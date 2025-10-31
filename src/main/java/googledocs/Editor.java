@@ -1,10 +1,7 @@
 package googledocs;
 
 import googledocs.document.Document;
-import googledocs.documentelement.ImageElement;
-import googledocs.documentelement.Newline;
-import googledocs.documentelement.TabElement;
-import googledocs.documentelement.TextElement;
+import googledocs.documentelement.*;
 import googledocs.persistence.Persistable;
 
 public class Editor {
@@ -17,12 +14,12 @@ public class Editor {
         this.persistable = persistable;
     }
 
-    public void addText(String text) {
-        document.addElement(new TextElement(text));
+    public void addText(DocumentElement element) {
+        document.addElement(element);
     }
 
-    public void addImage(String image) {
-        document.addElement(new ImageElement(image));
+    public void addImage(DocumentElement image) {
+        document.addElement(image);
     }
 
     public void addNewLine() {
