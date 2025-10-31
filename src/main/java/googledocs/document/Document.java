@@ -10,11 +10,9 @@ public class Document {
     private StringBuilder renderdDocument;
     public Document() {
         elements = new ArrayList<>();
+        renderdDocument = new StringBuilder();
     }
 
-    public void setElements(List<DocumentElement> elements) {
-        this.elements = elements;
-    }
 
     public void setRenderdDocument(String renderdDocument) {
         this.renderdDocument = new StringBuilder(renderdDocument);
@@ -23,6 +21,7 @@ public class Document {
     public void addElement(DocumentElement element) {
         elements.add(element);
     }
+
     public List<DocumentElement> getElements() {
         return elements;
     }
